@@ -2,16 +2,16 @@
 class SsmHelpers < Formula
   desc "Help manage systems with AWS Systems Manager with management helpers."
   homepage "https://github.com/disneystreaming/ssm-helpers"
-  version "0.1.1"
+  version "0.1.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/disneystreaming/ssm-helpers/releases/download/v0.1.1/ssm-helpers_0.1.1_Darwin_x86_64.tar.gz"
-    sha256 "c045ebd023c58e3069ff0ff2b8c0099a7f4accc997f0245f362b2bbf069716c6"
+    url "https://github.com/disneystreaming/ssm-helpers/releases/download/v0.1.3/ssm-helpers_0.1.3_Darwin_x86_64.tar.gz"
+    sha256 "1336fbe3767c042491571233c992eba9a9c3e23eb27e6d1b00fb1af9d948a6c3"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/disneystreaming/ssm-helpers/releases/download/v0.1.1/ssm-helpers_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "f9e94847cf99e0dbcf8ef01f57789651489bbc1f75708fa2f06285672d6abc10"
+      url "https://github.com/disneystreaming/ssm-helpers/releases/download/v0.1.3/ssm-helpers_0.1.3_Linux_x86_64.tar.gz"
+      sha256 "c53543eacf0465853f5eeb03a0bf67be34a43d772df38d62389474709e2242ca"
     end
   end
   
