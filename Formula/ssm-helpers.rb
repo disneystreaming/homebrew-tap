@@ -16,7 +16,7 @@ class SsmHelpers < Formula
   end
 
   depends_on "awscli"
-  depends_on "disneystreaming/aws-session-manager-plugin"
+  depends_on "disneystreaming/tap/aws-session-manager-plugin"
 
   def install
     bin.install "ssm-run"
