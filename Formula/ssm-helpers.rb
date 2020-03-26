@@ -14,8 +14,9 @@ class SsmHelpers < Formula
       sha256 "09d43fdc36bee747232b22a9db8601f82b8275a33bc33ca55cc7c16c4338934d"
     end
   end
-  
+
   depends_on "awscli"
+  depends_on "disneystreaming/aws-session-manager-plugin"
 
   def install
     bin.install "ssm-run"
