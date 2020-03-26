@@ -25,7 +25,9 @@ class AwsSessionManagerPlugin < Formula
         system "tar", "xf", "data.tar.gz"
         bin.install "usr/local/sessionmanagerplugin/bin/session-manager-plugin"
         prefix.install %w[LICENSE VERSION]
+      end
     end
+  end
 
   depends_on "awscli"
 
