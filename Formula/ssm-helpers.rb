@@ -7,11 +7,11 @@ class SsmHelpers < Formula
 
   if OS.mac?
     url "https://github.com/disneystreaming/ssm-helpers/releases/download/v0.2.2/ssm-helpers_0.2.2_Darwin_x86_64.tar.gz"
-    sha256 "668f9b5517176989cd2db53a8c6546de03bcbe39d6d75d4c065520bbd6b593b8"
+    sha256 "38552d0de9330fa555ecd6799a68cd8f069a62b22d265b78e4af3a364621e804"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/disneystreaming/ssm-helpers/releases/download/v0.2.2/ssm-helpers_0.2.2_Linux_x86_64.tar.gz"
-      sha256 "231648db14f8a1cc240e494b1a1dc55fedce7bb2d08fee0c12a6cbeb68873b15"
+      sha256 "20625957ec873b2e4f9eb72000805bb10b6a02e8c63d777fcbd7ff274c5aa88e"
     end
   end
   
