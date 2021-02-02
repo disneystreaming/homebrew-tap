@@ -2,16 +2,16 @@
 class SsmHelpers < Formula
   desc "Help manage systems with AWS Systems Manager with management helpers."
   homepage "https://github.com/disneystreaming/ssm-helpers"
-  version "0.2.2"
+  version "1.0.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/disneystreaming/ssm-helpers/releases/download/v0.2.2/ssm-helpers_0.2.2_Darwin_x86_64.tar.gz"
-    sha256 "38552d0de9330fa555ecd6799a68cd8f069a62b22d265b78e4af3a364621e804"
+    url "https://github.com/disneystreaming/ssm-helpers/releases/download/v1.0.0/ssm-helpers_1.0.0_Darwin_x86_64.tar.gz"
+    sha256 "77b058ae2cd4656f56ee891abd9cf5faedb198aff55aa422bb86d4bf5cf9c6cf"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/disneystreaming/ssm-helpers/releases/download/v0.2.2/ssm-helpers_0.2.2_Linux_x86_64.tar.gz"
-      sha256 "20625957ec873b2e4f9eb72000805bb10b6a02e8c63d777fcbd7ff274c5aa88e"
+      url "https://github.com/disneystreaming/ssm-helpers/releases/download/v1.0.0/ssm-helpers_1.0.0_Linux_x86_64.tar.gz"
+      sha256 "b04e1168fcc3446ccc91bef7ce0549faa82d0612bca8612c4f3d5f7d7f291511"
     end
   end
   
@@ -19,7 +19,6 @@ class SsmHelpers < Formula
   depends_on "disneystreaming/tap/aws-session-manager-plugin"
 
   def install
-    bin.install "ssm-run"
-    bin.install "ssm-session"
+    bin.install "ssm"
   end
 end
