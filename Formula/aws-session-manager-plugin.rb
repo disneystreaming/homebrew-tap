@@ -5,7 +5,7 @@ class AwsSessionManagerPlugin < Formula
 
   if OS.mac?
     url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/mac/sessionmanager-bundle.zip"
-    sha256 "d9b558193370b2ecc0ddba001b6ee974b14b60d4d247851706e26a9811f15349"
+    sha256 "900d2c3b1044edf70cb024288d581b2cccf5cd4d5ed3061e529b549b67b0bc05"
 
     def install
       bin.install "bin/session-manager-plugin"
@@ -17,9 +17,10 @@ class AwsSessionManagerPlugin < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/ubuntu_64bit/session-manager-plugin.deb"
-        sha256 "342602b05552268966bcac2ec7698447e1202eb8e3d2943066dd9954697604ef"
+        sha256 "27f01987ed2977480c1ff322e0889270a3b8df43097f71e2667827e745e8bbba"
       elsif Hardware::CPU.is_32_bit?
         url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/ubuntu_32bit/session-manager-plugin.deb"
+        sha256 "428e1f8b1114f7dcd2b33028dd2484b0089d1746463a3fec65c1ffebd1120d9e"
       end
 
       def install
