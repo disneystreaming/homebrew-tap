@@ -22,6 +22,10 @@ class AwsSessionManagerPlugin < Formula
         url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/ubuntu_32bit/session-manager-plugin.deb"
         sha256 "428e1f8b1114f7dcd2b33028dd2484b0089d1746463a3fec65c1ffebd1120d9e"
       end
+    elsif Hardware::CPU.arm?
+      url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/ubuntu_arm64/session-manager-plugin.deb"
+      sha256 "dddd35f810d6d4461d032f1ade48ab95dc10c06b7e5d15c533800d0a26293ec4"
+    end
 
       def install
         system "ar", "x", "session-manager-plugin.deb"
@@ -29,7 +33,6 @@ class AwsSessionManagerPlugin < Formula
         bin.install "usr/local/sessionmanagerplugin/bin/session-manager-plugin"
         prefix.install_metafiles
       end
-    end
   end
 
   depends_on "awscli"
