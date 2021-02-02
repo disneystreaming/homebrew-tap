@@ -1,7 +1,7 @@
 class AwsSessionManagerPlugin < Formula
   desc "Official Amazon AWS session manager plugin"
   homepage "https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html"
-  version "1.1.54.0"
+  version "1.2.30.0"
 
   if OS.mac?
     url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/mac/sessionmanager-bundle.zip"
