@@ -1,11 +1,11 @@
 class AwsSessionManagerPlugin < Formula
   desc "Official Amazon AWS session manager plugin"
   homepage "https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html"
-  version "1.2.30.0"
+  version "1.2.54.0"
 
   if OS.mac?
     url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/mac/sessionmanager-bundle.zip"
-    sha256 "900d2c3b1044edf70cb024288d581b2cccf5cd4d5ed3061e529b549b67b0bc05"
+    sha256 "920c6842bb6edadb15e6dff7a00f99da3b98db884f3b39cf1a395032ca8e2198"
 
     def install
       bin.install "bin/session-manager-plugin"
@@ -17,14 +17,14 @@ class AwsSessionManagerPlugin < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/ubuntu_64bit/session-manager-plugin.deb"
-        sha256 "27f01987ed2977480c1ff322e0889270a3b8df43097f71e2667827e745e8bbba"
+        sha256 "bae835713e3247135071ffb35b3d268bbd86e0419adde64756e1b7e88352aab3"
       elsif Hardware::CPU.is_32_bit?
         url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/ubuntu_32bit/session-manager-plugin.deb"
-        sha256 "428e1f8b1114f7dcd2b33028dd2484b0089d1746463a3fec65c1ffebd1120d9e"
+        sha256 "bc504b5262fefd307a176662655b410a69c980260c5773bded108c1566635196"
       end
     elsif Hardware::CPU.arm?
       url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/ubuntu_arm64/session-manager-plugin.deb"
-      sha256 "dddd35f810d6d4461d032f1ade48ab95dc10c06b7e5d15c533800d0a26293ec4"
+      sha256 "6072065903705bc697e25bc1bd7009386a865fdffd7bdc72fb93b2b692d3add6"
     end
 
       def install
