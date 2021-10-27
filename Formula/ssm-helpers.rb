@@ -5,12 +5,12 @@
 class SsmHelpers < Formula
   desc "Help manage systems with AWS Systems Manager with management helpers."
   homepage "https://github.com/disneystreaming/ssm-helpers"
-  version "1.1.1"
+  version "1.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/disneystreaming/ssm-helpers/releases/download/v1.1.1/ssm-helpers_1.1.1_Darwin_x86_64.tar.gz"
-      sha256 "4bad096d8820ea7acc1076dda34fee82022abf52f8f04e1e1ffcabb410469001"
+      url "https://github.com/disneystreaming/ssm-helpers/releases/download/v1.1.2/ssm-helpers_1.1.2_Darwin_x86_64.tar.gz"
+      sha256 "ccbbebb6c7b527ceac6a4f0603c296d6c8522cdf753d68d5bbdae9379ef17174"
 
       def install
         bin.install "ssm"
@@ -21,8 +21,8 @@ class SsmHelpers < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/disneystreaming/ssm-helpers/releases/download/v1.1.1/ssm-helpers_1.1.1_Linux_x86_64.tar.gz"
-      sha256 "40424036a02b09db974e0e3137a6eda2dffb6823a08a1a42c7b50a06dcd79bb0"
+      url "https://github.com/disneystreaming/ssm-helpers/releases/download/v1.1.2/ssm-helpers_1.1.2_Linux_x86_64.tar.gz"
+      sha256 "397a38df26a20726a805df6519b40ae468edc2513497ae8391d47f235d59d03f"
 
       def install
         bin.install "ssm"
