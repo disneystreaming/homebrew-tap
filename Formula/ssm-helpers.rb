@@ -5,24 +5,32 @@
 class SsmHelpers < Formula
   desc "Help manage systems with AWS Systems Manager with management helpers."
   homepage "https://github.com/disneystreaming/ssm-helpers"
-  version "1.1.2"
+  version "1.2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/disneystreaming/ssm-helpers/releases/download/v1.1.2/ssm-helpers_1.1.2_Darwin_x86_64.tar.gz"
-      sha256 "ccbbebb6c7b527ceac6a4f0603c296d6c8522cdf753d68d5bbdae9379ef17174"
+    url "https://github.com/disneystreaming/ssm-helpers/releases/download/v1.2.0/ssm-helpers_1.2.0_Darwin_x86_64.tar.gz"
+    sha256 "acb654ce5623f843f7ae88e013c50e26634dd7c25a4b27bb4685e1b776e83ca9"
 
-      def install
-        bin.install "ssm"
-        bin.install_symlink  bin/"ssm" => "ssm-helpers"
+    def install
+      bin.install "ssm"
+      bin.install_symlink  bin/"ssm" => "ssm-helpers"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the SsmHelpers
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/disneystreaming/ssm-helpers/releases/download/v1.1.2/ssm-helpers_1.1.2_Linux_x86_64.tar.gz"
-      sha256 "397a38df26a20726a805df6519b40ae468edc2513497ae8391d47f235d59d03f"
+      url "https://github.com/disneystreaming/ssm-helpers/releases/download/v1.2.0/ssm-helpers_1.2.0_Linux_x86_64.tar.gz"
+      sha256 "b226c71e271195ba88832e44bd09b5da780b004d5fa87b2c2c30134b291df5e4"
 
       def install
         bin.install "ssm"
@@ -31,6 +39,7 @@ class SsmHelpers < Formula
     end
   end
 
+  depends_on "tmux"
   depends_on "awscli"
   depends_on "disneystreaming/tap/aws-session-manager-plugin"
 end
